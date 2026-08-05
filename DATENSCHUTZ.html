@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Datenschutzhinweise für die Browser-Erweiterung DAP-Postfachwächter 1.0">
+    <title>Datenschutz – DAP-Postfachwächter</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #172033;
+            --muted: #5b6474;
+            --line: #dce2ea;
+            --panel: #f6f8fb;
+            --accent: #a66a00;
+            --accent-soft: #fff4d6;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background: #fff;
+            color: var(--ink);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 17px;
+            line-height: 1.65;
+        }
+        main {
+            width: min(860px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 52px 0 72px;
+        }
+        header {
+            padding: 28px 30px;
+            border: 1px solid var(--line);
+            border-left: 6px solid var(--accent);
+            border-radius: 14px;
+            background: var(--panel);
+        }
+        .eyebrow {
+            margin: 0 0 4px;
+            color: var(--accent);
+            font-size: .82rem;
+            font-weight: 750;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+        h1 {
+            margin: 0;
+            font-size: clamp(2rem, 6vw, 3rem);
+            line-height: 1.12;
+        }
+        header p:last-child { margin: 12px 0 0; color: var(--muted); }
+        h2 {
+            margin: 42px 0 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--line);
+            font-size: 1.35rem;
+            line-height: 1.3;
+        }
+        p, ul { margin: 0 0 16px; }
+        li + li { margin-top: 7px; }
+        a { color: #7a4d00; text-underline-offset: 3px; }
+        .contact, .notice {
+            margin: 18px 0;
+            padding: 17px 20px;
+            border-radius: 10px;
+        }
+        .contact { background: var(--accent-soft); }
+        .notice { background: var(--panel); border: 1px solid var(--line); }
+        code {
+            padding: 2px 5px;
+            border-radius: 4px;
+            background: #eef1f5;
+            font-size: .92em;
+        }
+        footer {
+            margin-top: 48px;
+            padding-top: 18px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: .92rem;
+        }
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            main { padding-top: 24px; }
+            header { padding: 22px 20px; }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <header>
+        <p class="eyebrow">DAP-Postfachwächter 1.0</p>
+        <h1>Datenschutzhinweise</h1>
+        <p>Stand: 5. August 2026</p>
+    </header>
+
+    <h2>1. Herausgeber und Kontakt</h2>
+    <p>Herausgeber der Browser-Erweiterung „DAP-Postfachwächter“ und Ansprechpartner für Fragen zu diesen Datenschutzhinweisen ist:</p>
+    <div class="contact">
+        <strong>Benjamin Utke</strong><br>
+        E-Mail: <a href="mailto:benjamin.utke@gmx.de">benjamin.utke@gmx.de</a>
+    </div>
+    <p>Der DAP-Postfachwächter ist eine privat initiierte, unabhängige und nicht offizielle Browser-Erweiterung. Er ist kein Produkt der Friedrich-Ebert-Gemeinschaftsschule Schopfheim (FES), des Landes Baden-Württemberg, von Schule@BW, des IBBW oder des Betreibers des DAP-Webmailers.</p>
+
+    <h2>2. Zweck der Erweiterung</h2>
+    <p>Die Erweiterung prüft den Posteingang des bereits im Browser geöffneten DAP-Webmailers von Schule@BW in regelmäßigen Abständen. Sie informiert die angemeldete Person durch eine neutrale Systembenachrichtigung über nach der Einrichtung neu erkannte und weiterhin ungelesene E-Mails.</p>
+    <p>Die Erweiterung besitzt keine eigene Anmeldung. Zugangsdaten und der zweite Authentifizierungsfaktor werden ausschließlich auf den originalen Seiten von Schule@BW eingegeben.</p>
+
+    <h2>3. Lokal verarbeitete Daten</h2>
+    <p>Für die beschriebene Funktion verarbeitet die Erweiterung ausschließlich im Browser der nutzenden Person:</p>
+    <ul>
+        <li>technische Nachrichten- und Ordnerkennungen,</li>
+        <li>den Gelesen-/Ungelesen-Status von Nachrichten,</li>
+        <li>die Zahl erkannter beziehungsweise neu erkannter ungelesener Nachrichten,</li>
+        <li>technische Statuswerte und Zeitpunkte der letzten Prüfung oder Erinnerung,</li>
+        <li>die Kennung des geöffneten DAP-Tabs sowie</li>
+        <li>die gewählten Einstellungen der Erweiterung.</li>
+    </ul>
+    <p>Bevorzugt werden Nachrichtenkennung, Ordnerkennung und Status über die bereits aktive DAP-Sitzung abgefragt. Hierzu kann eine vom DAP im geöffneten Tab bereitgestellte Sitzungskennung vorübergehend verwendet werden. Diese Sitzungskennung wird nicht dauerhaft gespeichert und erscheint nicht in der kopierbaren Diagnose.</p>
+    <p>Falls die bevorzugte Abfrage nicht verfügbar ist, wertet die Erweiterung die sichtbare Nachrichtenliste aus. Dabei können Absenderbezeichnung, Betreff, Datumsangabe oder barrierefreie Beschriftungen vorübergehend verarbeitet werden, um eine Nachricht wiederzuerkennen. Diese Klartextangaben werden weder im Erweiterungsspeicher abgelegt noch in Benachrichtigungen oder Diagnosen ausgegeben.</p>
+    <p>Mailtexte und Anhänge werden nicht ausgelesen. Benachrichtigungen enthalten weder Absender noch Betreff oder Mailinhalt.</p>
+
+    <h2>4. Lokale Speicherung</h2>
+    <p>Im lokalen, erweiterungseigenen Browserspeicher werden gespeichert:</p>
+    <ul>
+        <li>höchstens 500 pseudonymisierte Prüfsummen von Nachrichtenkennungen,</li>
+        <li>Prüfsummen der noch zu erinnernden Nachrichten,</li>
+        <li>Zähler, Zeitpunkte und datensparsame technische Diagnosewerte sowie</li>
+        <li>die Einstellungen zu Überwachung, Benachrichtigung, Erinnerungsintervall und optionalem Öffnen des DAP beim Browserstart.</li>
+    </ul>
+    <p>Die Prüfsummen dienen ausschließlich dazu, neu eintreffende Nachrichten von bereits vorhandenen zu unterscheiden. Sie sind keine Klartextkopien der Nachrichten, stellen aber eine technische Pseudonymisierung und keine rechtlich garantierte Anonymisierung dar.</p>
+    <p>Die Daten bleiben im lokalen Profil des verwendeten Browsers. Sie werden beim Entfernen der Erweiterung gelöscht. Mit „Neu einrichten“ werden insbesondere der gespeicherte Ausgangsbestand und die Erinnerungsliste neu gebildet; für eine vollständige Löschung sämtlicher Einstellungen und Statusdaten ist die Erweiterung zu deinstallieren.</p>
+
+    <h2>5. Datenübertragung und Empfänger</h2>
+    <div class="notice"><strong>Keine Übertragung an den Herausgeber:</strong> Die Erweiterung überträgt keine durch sie verarbeiteten E-Mail-, Nutzungs- oder Diagnosedaten an Benjamin Utke oder andere Dritte. Es gibt keinen Analyse-, Telemetrie-, Werbe- oder Fehlerberichtsdienst und keinen vom Herausgeber betriebenen Server.</div>
+    <p>Technisch notwendige Abfragen erfolgen ausschließlich verschlüsselt innerhalb der bereits angemeldeten DAP-Sitzung an <code>https://webmail.dap.bw.schule/</code>. Diese Kommunikation ist Bestandteil der vom Nutzer aufgerufenen DAP-Anwendung. Für die Verarbeitung durch Schule@BW und den Betreiber des DAP gelten deren eigene Datenschutzinformationen.</p>
+    <p>Die Erweiterung verkauft, vermietet oder übermittelt keine Nutzerdaten an Dritte. Es findet keine Nutzung für Werbung, Profilbildung, Kreditwürdigkeitsentscheidungen oder andere sachfremde Zwecke statt. Menschen erhalten über die Erweiterung keinen Zugriff auf die verarbeiteten E-Mail-Daten.</p>
+    <p>Browser- und Storeanbieter können unabhängig von der Erweiterung Daten zur Installation und Aktualisierung nach ihren eigenen Bedingungen verarbeiten.</p>
+
+    <h2>6. Berechtigungsumfang</h2>
+    <p>Der Webseitenzugriff ist technisch auf <code>https://webmail.dap.bw.schule/*</code> begrenzt. Die Erweiterung erhält keinen allgemeinen Zugriff auf den Browserverlauf oder andere Webseiten. Sie greift nicht auf Mikrofon, Kamera, Standort, Kontakte oder Dateien des Geräts zu.</p>
+    <p>Die weiteren Browserberechtigungen dienen ausschließlich der regelmäßigen Prüfung, der lokalen Speicherung, der Ausführung des mitgelieferten Erkennungscodes im geöffneten DAP-Tab und der Anzeige von Systembenachrichtigungen.</p>
+
+    <h2>7. Chrome-Web-Store-Richtlinie zur beschränkten Nutzung</h2>
+    <p>Die Nutzung von Informationen, die über Browserberechtigungen erhalten werden, erfolgt in Übereinstimmung mit der Chrome Web Store User Data Policy einschließlich der Anforderungen zur beschränkten Nutzung („Limited Use“). Die Daten werden nur für den offen beschriebenen Einzelzweck verwendet, nicht zu Werbezwecken genutzt, nicht verkauft und nicht für sachfremde Zwecke an Dritte weitergegeben.</p>
+
+    <h2>8. Auskunft, Löschung und Support</h2>
+    <p>Da keine von der Erweiterung verarbeiteten E-Mail- oder Diagnosedaten an den Herausgeber übertragen werden, kann der Herausgeber diese Daten weder einsehen noch zentral berichtigen oder löschen. Die lokal gespeicherten Daten können durch Deinstallation der Erweiterung vollständig entfernt werden.</p>
+    <p>Fragen zur Funktionsweise oder zu diesen Datenschutzhinweisen können an <a href="mailto:benjamin.utke@gmx.de">benjamin.utke@gmx.de</a> gerichtet werden. Anfragen zu den im dienstlichen DAP gespeicherten E-Mails und Kontodaten sind an die dafür zuständige schulische oder behördliche Stelle zu richten.</p>
+
+    <h2>9. Änderungen</h2>
+    <p>Diese Hinweise werden angepasst, wenn sich Funktionsumfang, Datenverarbeitung oder Veröffentlichungsanforderungen ändern. Maßgeblich ist die zur jeweils installierten Version veröffentlichte Fassung.</p>
+
+    <footer>DAP-Postfachwächter 1.0 · Herausgegeben von Benjamin Utke · Kontakt: benjamin.utke@gmx.de</footer>
+</main>
+</body>
+</html>
