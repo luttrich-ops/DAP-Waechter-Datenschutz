@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Datenschutzhinweise für die Browser-Erweiterung DAP-Postfachwächter 1.1.0">
+    <meta name="description" content="Datenschutzhinweise für die Browser-Erweiterung DAP-Postfachwächter 1.2.2">
     <title>Datenschutz – DAP-Postfachwächter</title>
     <style>
         :root {
@@ -90,9 +90,9 @@
 <body>
 <main>
     <header>
-        <p class="eyebrow">DAP-Postfachwächter 1.1.0</p>
+        <p class="eyebrow">DAP-Postfachwächter 1.2.2</p>
         <h1>Datenschutzhinweise</h1>
-        <p>Stand: 9. August 2026</p>
+        <p>Stand: 9. September 2026</p>
     </header>
 
     <h2>1. Herausgeber und Kontakt</h2>
@@ -104,43 +104,48 @@
     <p>Der DAP-Postfachwächter ist eine privat initiierte, unabhängige und nicht offizielle Browser-Erweiterung. Er ist kein Produkt der Friedrich-Ebert-Gemeinschaftsschule Schopfheim (FES), des Landes Baden-Württemberg, von Schule@BW, des IBBW oder des Betreibers des DAP-Webmailers.</p>
 
     <h2>2. Zweck der Erweiterung</h2>
-    <p>Die Erweiterung prüft den Posteingang des bereits im Browser geöffneten DAP-Webmailers von Schule@BW je nach gewählter Einstellung ungefähr alle 1, 5, 10 oder 15 Minuten; voreingestellt sind 5 Minuten. Nach wiederholten Fehlern können automatische Wiederholungen vorübergehend weiter reduziert werden. Sie informiert die angemeldete Person durch eine neutrale Systembenachrichtigung über nach der Einrichtung neu erkannte und weiterhin ungelesene E-Mails.</p>
-    <p>Die Erweiterung besitzt keine eigene Anmeldung. Zugangsdaten und der zweite Authentifizierungsfaktor werden ausschließlich auf den originalen Seiten von Schule@BW eingegeben.</p>
+    <p>Die Erweiterung prüft den Posteingang eines bereits im Browser geöffneten DAP-Webmailers von Schule@BW je nach Einstellung ungefähr alle 1, 5, 10 oder 15 Minuten; voreingestellt sind 5 Minuten. Sie informiert die angemeldete Person durch eine neutrale Systembenachrichtigung über nach der Einrichtung neu erkannte und weiterhin ungelesene E-Mails. Wiederholungserinnerungen können ausgeschaltet oder auf 15, 30, 60 beziehungsweise 120 Minuten gesetzt werden.</p>
+    <p>Ein mitgelieferter Seitenmonitor erkennt ausschließlich technische Bereitschaftsmerkmale des geöffneten DAP-Postfachs. Sobald Nachrichtenliste, Posteingangsordner oder Leerzustand aufgebaut sind, stößt er eine Prüfung an. Er liest dafür keine Absender, Betreffzeilen oder Mailtexte aus und führt selbst keine Netzwerkabfrage aus.</p>
+    <p>Die Erweiterung besitzt keine eigene Anmeldung. Benutzername, Passwort und der zweite Authentifizierungsfaktor werden ausschließlich auf den originalen Seiten von Schule@BW eingegeben.</p>
 
     <h2>3. Lokal verarbeitete Daten</h2>
     <p>Für die beschriebene Funktion verarbeitet die Erweiterung ausschließlich im Browser der nutzenden Person:</p>
     <ul>
-        <li>technische Nachrichten- und Ordnerkennungen,</li>
+        <li>stabile technische Nachrichten- und gegebenenfalls Ordnerkennungen,</li>
         <li>den Gelesen-/Ungelesen-Status von Nachrichten,</li>
         <li>die Zahl erkannter beziehungsweise neu erkannter ungelesener Nachrichten,</li>
-        <li>technische Statuswerte und Zeitpunkte der letzten Prüfung oder Erinnerung,</li>
-        <li>die Kennung des geöffneten DAP-Tabs sowie</li>
-        <li>die gewählten Einstellungen der Erweiterung.</li>
+        <li>technische Statuswerte, Auslöser, Fehlercodes und Zeitpunkte,</li>
+        <li>die Kennung eines geöffneten DAP-Tabs,</li>
+        <li>die gewählten Einstellungen der Erweiterung,</li>
+        <li>einen pseudonymen Konto-Fingerabdruck zur Erkennung eines Konto-Wechsels sowie</li>
+        <li>vorübergehend technische Sitzungsinformation der bereits bestehenden DAP-Anmeldung, soweit sie für eine direkte DAP-Abfrage erforderlich ist.</li>
     </ul>
-    <p>Bevorzugt werden Nachrichtenkennung, Ordnerkennung und Status über die bereits aktive DAP-Sitzung abgefragt. Hierzu kann eine vom DAP im geöffneten Tab bereitgestellte Sitzungskennung vorübergehend verwendet werden. Diese Sitzungskennung wird nicht dauerhaft gespeichert und erscheint nicht in der kopierbaren Diagnose.</p>
-    <p>Falls die bevorzugte Abfrage nicht verfügbar ist, wertet die Erweiterung die sichtbare Nachrichtenliste aus. Dabei können Absenderbezeichnung, Betreff, Datumsangabe oder barrierefreie Beschriftungen vorübergehend verarbeitet werden, um eine Nachricht wiederzuerkennen. Diese Klartextangaben werden weder im Erweiterungsspeicher abgelegt noch in Benachrichtigungen oder Diagnosen ausgegeben.</p>
-    <p>Mailtexte und Anhänge werden nicht ausgelesen. Benachrichtigungen enthalten weder Absender noch Betreff oder Mailinhalt.</p>
+    <p>Stellt der geöffnete DAP eine technische Sitzungskennung bereit, kann die Erweiterung Nachrichtenkennungen und Status über diese bereits aktive Sitzung abfragen. Ohne beobachtete Sitzungskennung erzeugt sie keine API-Testanfragen und verwendet die geöffnete Nachrichtenliste. Eine beobachtete Sitzungskennung wird nicht im Klartext gespeichert und erscheint nicht in der kopierbaren Diagnose. Pro API-Prüfung werden höchstens 100 Nachrichten betrachtet; bei ausgeschöpftem Fenster kennzeichnet die Erweiterung betroffene Werte als Untergrenze.</p>
+    <p>Falls die bevorzugte Abfrage nicht verfügbar ist, wertet die Erweiterung die geöffnete DAP-Oberfläche aus. Sie verwendet dabei entweder stabile technische Kennungen oder ausschließlich einen sichtbaren Ungelesen-Zähler. Absender, Betreff, Datum und vollständige barrierefreie Beschriftungen werden nicht als Ersatzidentität gehasht oder gespeichert. Im reinen Zählmodus kann ein Austausch ungelesener Nachrichten bei gleichbleibender Gesamtzahl nicht erkannt werden; dieser eingeschränkte Zustand wird sichtbar ausgewiesen.</p>
+    <p>Der Seitenmonitor beobachtet Strukturänderungen innerhalb der bereits geöffneten DAP-Webseite, damit eine Prüfung erst nach dem Aufbau des Postfachs und auch nach einem internen Seitenwechsel ausgelöst werden kann. An den Hintergrunddienst werden nur Monitorversion und technischer Auslösegrund übermittelt.</p>
+    <p>Absender, Betreffzeilen, Mailtexte und Anhänge werden weder gespeichert noch in Benachrichtigungen oder der kopierbaren Diagnose ausgegeben.</p>
 
     <h2>4. Lokale Speicherung</h2>
     <p>Im lokalen, erweiterungseigenen Browserspeicher werden gespeichert:</p>
     <ul>
         <li>höchstens 500 pseudonymisierte Prüfsummen von Nachrichtenkennungen,</li>
-        <li>Prüfsummen der noch zu erinnernden Nachrichten,</li>
-        <li>Zähler, Zeitpunkte und datensparsame technische Diagnosewerte sowie</li>
+        <li>Prüfsummen der noch zu erinnernden Nachrichten und ein pseudonymer Konto-Fingerabdruck,</li>
+        <li>Zähler, Zeitpunkte, Auslöser und datensparsame technische Diagnosewerte sowie</li>
         <li>die Einstellungen zu Überwachung, Benachrichtigung, Prüfintervall, Erinnerungsintervall und optionalem Öffnen des DAP beim Browserstart.</li>
     </ul>
-    <p>Die Prüfsummen dienen ausschließlich dazu, neu eintreffende Nachrichten von bereits vorhandenen zu unterscheiden. Sie sind keine Klartextkopien der Nachrichten, stellen aber eine technische Pseudonymisierung und keine rechtlich garantierte Anonymisierung dar.</p>
-    <p>Die Daten bleiben im lokalen Profil des verwendeten Browsers. Sie werden beim Entfernen der Erweiterung gelöscht. Mit „Neu einrichten“ werden insbesondere der gespeicherte Ausgangsbestand und die Erinnerungsliste neu gebildet; für eine vollständige Löschung sämtlicher Einstellungen und Statusdaten ist die Erweiterung zu deinstallieren.</p>
+    <p>Die Prüfsummen dienen ausschließlich dazu, neu eintreffende Nachrichten von bereits vorhandenen zu unterscheiden und einen Konto-Wechsel ohne Klartextkennung zu erkennen. Sie sind keine Klartextkopien, stellen aber eine technische Pseudonymisierung und keine rechtlich garantierte Anonymisierung dar.</p>
+    <p>Die Daten bleiben im lokalen Profil des verwendeten Browsers. Mit „Neu einrichten“ werden insbesondere Ausgangsbestand und Erinnerungsliste neu gebildet. Bei einem erkannten Konto-Wechsel geschieht dies automatisch und ohne Meldung über bereits vorhandene Nachrichten. Für eine vollständige Löschung sämtlicher Einstellungen und Statusdaten ist die Erweiterung zu deinstallieren.</p>
 
     <h2>5. Datenübertragung und Empfänger</h2>
     <div class="notice"><strong>Keine Übertragung an den Herausgeber:</strong> Die Erweiterung überträgt keine durch sie verarbeiteten E-Mail-, Nutzungs- oder Diagnosedaten an Benjamin Utke oder andere Dritte. Es gibt keinen Analyse-, Telemetrie-, Werbe- oder Fehlerberichtsdienst und keinen vom Herausgeber betriebenen Server.</div>
-    <p>Technisch notwendige Abfragen erfolgen ausschließlich verschlüsselt innerhalb der bereits angemeldeten DAP-Sitzung an <code>https://webmail.dap.bw.schule/</code>. Diese Kommunikation ist Bestandteil der vom Nutzer aufgerufenen DAP-Anwendung. Für die Verarbeitung durch Schule@BW und den Betreiber des DAP gelten deren eigene Datenschutzinformationen.</p>
+    <p>Technisch notwendige authentifizierte GET-Anfragen erfolgen ausschließlich verschlüsselt innerhalb der bereits angemeldeten DAP-Sitzung an <code>https://webmail.dap.bw.schule/</code>. Begrenzt der DAP-Dienst Anfragen, berücksichtigt die Erweiterung eine Retry-After-Angabe und pausiert weitere API-Versuche zeitweise. Für die Verarbeitung durch Schule@BW und den Betreiber des DAP gelten deren eigene Datenschutzinformationen.</p>
     <p>Die Erweiterung verkauft, vermietet oder übermittelt keine Nutzerdaten an Dritte. Es findet keine Nutzung für Werbung, Profilbildung, Kreditwürdigkeitsentscheidungen oder andere sachfremde Zwecke statt. Menschen erhalten über die Erweiterung keinen Zugriff auf die verarbeiteten E-Mail-Daten.</p>
     <p>Browser- und Storeanbieter können unabhängig von der Erweiterung Daten zur Installation und Aktualisierung nach ihren eigenen Bedingungen verarbeiten.</p>
 
     <h2>6. Berechtigungsumfang</h2>
     <p>Der Webseitenzugriff ist technisch auf <code>https://webmail.dap.bw.schule/*</code> begrenzt. Die Erweiterung erhält keinen allgemeinen Zugriff auf den Browserverlauf oder andere Webseiten. Sie greift nicht auf Mikrofon, Kamera, Standort, Kontakte oder Dateien des Geräts zu.</p>
-    <p>Die weiteren Browserberechtigungen dienen ausschließlich der Prüfung im gewählten Intervall, der lokalen Speicherung, der Ausführung des mitgelieferten Erkennungscodes im geöffneten DAP-Tab und der Anzeige von Systembenachrichtigungen.</p>
+    <p>Die weiteren Browserberechtigungen dienen ausschließlich der Prüfung im gewählten Intervall, der lokalen Speicherung, der technischen Bereitschaftserkennung und Ausführung des mitgelieferten Erkennungscodes im geöffneten DAP-Tab sowie der Anzeige von Systembenachrichtigungen.</p>
+    <p>Firefox bezeichnet die für die Kernfunktion erforderlichen Datenkategorien im Manifest als <code>authenticationInfo</code>, <code>personalCommunications</code> und <code>websiteContent</code>. Dies beschreibt die vorübergehende Verwendung der bestehenden DAP-Sitzung, die lokale Verarbeitung technischer Nachrichtenkennungen und Status sowie den DOM-Ausweichweg. Es bedeutet nicht, dass diese Daten an den Herausgeber übertragen werden.</p>
 
     <h2>7. Chrome-Web-Store-Richtlinie zur beschränkten Nutzung</h2>
     <p>Die Nutzung von Informationen, die über Browserberechtigungen erhalten werden, erfolgt in Übereinstimmung mit der Chrome Web Store User Data Policy einschließlich der Anforderungen zur beschränkten Nutzung („Limited Use“). Die Daten werden nur für den offen beschriebenen Einzelzweck verwendet, nicht zu Werbezwecken genutzt, nicht verkauft und nicht für sachfremde Zwecke an Dritte weitergegeben.</p>
@@ -159,7 +164,7 @@
     <h2>10. Änderungen</h2>
     <p>Diese Hinweise werden angepasst, wenn sich Funktionsumfang, Datenverarbeitung oder Veröffentlichungsanforderungen ändern. Maßgeblich ist die zur jeweils installierten Version veröffentlichte Fassung.</p>
 
-    <footer>DAP-Postfachwächter 1.1.0 · Herausgegeben von Benjamin Utke · Kontakt: benjamin.utke@gmx.de</footer>
+    <footer>DAP-Postfachwächter 1.2.2 · Herausgegeben von Benjamin Utke · Kontakt: benjamin.utke@gmx.de</footer>
 </main>
 </body>
 </html>
